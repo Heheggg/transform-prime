@@ -32,8 +32,23 @@ The file follows the following format:
 See the file script for an example of the file format
 """
 def parse_file( fname, points, transform, screen, color ):
-    command = ['ident','scale','move','rotate','apply','display','scale','quit']
+    command = ['ident','scale','move','rotate','apply','display','save','quit']
     run = 1;
-    while(run)
-        get
-    pass
+    
+    import re
+    f = open(fname,"r")
+    text = f.read()
+    text = filter(None, re.split(",\n",text))
+    text = filter(None, text)
+    f.close()
+    
+    for i in range(len(text))
+        if(text[i] == command[1])
+            
+        elif(text[i] == command[2])
+
+        elif(text[i] == command[3])
+
+    
+            
+

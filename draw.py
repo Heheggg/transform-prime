@@ -20,8 +20,17 @@ def add_edge( matrix, x0, y0, z0, x1, y1, z1 ):
     add_point(matrix, x0, y0, z0)
     add_point(matrix, x1, y1, z1)
     
-def add_point( matrix, x, y, z=0 ):
-    matrix.append( [x, y, z, 1] )
+def add_point( matrix, x, y, z=0 ) 
+    for i in range( len( matrix ) ):
+        if i == 0:
+            matrix[i].append( x )
+        elif i == 1:
+            matrix[i].append( y )
+        elif i == 2:
+            matrix[i].append( z )
+        else:
+            matrix[i].append( 1 ) 
+
     
 
 
